@@ -15,11 +15,11 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
         builder.Property(p => p.Price).HasColumnType("decimal(18,2)");
 
         builder.HasData(
-            new Product(Guid.NewGuid(), "X Burger", 5.00m, ProductCategory.Sandwich),
-            new Product(Guid.NewGuid(), "X Egg", 4.50m, ProductCategory.Sandwich),
-            new Product(Guid.NewGuid(), "X Bacon", 7.00m, ProductCategory.Sandwich),
-            new Product(Guid.NewGuid(), "Batata frita", 2.00m, ProductCategory.Fries),
-            new Product(Guid.NewGuid(), "Refrigerante", 2.50m, ProductCategory.Soda)
+            new Product(new Guid("11111111-1111-1111-1111-111111111111"), "X Burger", 5.00m, ProductCategory.Sandwich),
+            new Product(new Guid("22222222-2222-2222-2222-222222222222"), "X Egg", 4.50m, ProductCategory.Sandwich),
+            new Product(new Guid("33333333-3333-3333-3333-333333333333"), "X Bacon", 7.00m, ProductCategory.Sandwich),
+            new Product(new Guid("44444444-4444-4444-4444-444444444444"), "Batata frita", 2.00m, ProductCategory.Fries),
+            new Product(new Guid("55555555-5555-5555-5555-555555555555"), "Refrigerante", 2.50m, ProductCategory.Soda)
         );
     }
 }

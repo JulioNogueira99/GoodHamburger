@@ -1,4 +1,6 @@
-﻿using GoodHamburger.Infrastructure.Data;
+﻿using GoodHamburger.Application.Interfaces;
+using GoodHamburger.Infrastructure.Data;
+using GoodHamburger.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,6 +14,8 @@ public static class DependencyInjection
         services.AddDbContext<GoodHamburgerDbContext>(options =>
             options.UseSqlite(configuration.GetConnectionString("DefaultConnection")));
 
+        services.AddScoped<IProductRepository, ProductRepository>();
+        services.AddScoped<IOrderRepository, OrderRepository>();
 
         return services;
     }

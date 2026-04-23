@@ -1,7 +1,4 @@
 <Solution>
-  <Folder Name="/frontend/">
-    <Project Path="frontend/GoodHamburger.Frontend/GoodHamburger.Frontend.csproj" />
-  </Folder>
   <Folder Name="/src/">
     <Project Path="src/GoodHamburger.API/GoodHamburger.API.csproj" />
     <Project Path="src/GoodHamburger.Application/GoodHamburger.Application.csproj" />
